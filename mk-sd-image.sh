@@ -95,7 +95,7 @@ else
 		RAW_FILE=${SOC}-eflasher-$(date +%Y%m%d).img
 		RAW_SIZE_MB=7800 ;;
 	buildroot)
-	        RAW_FILE=${SOC}-sd-buildroot-linux-4.4-arm64-$(date +%Y%m%d).img
+	        RAW_FILE=${SOC}-sd-screenbox-os-$(date +%Y%m%d%H%m).img
 	        RAW_SIZE_MB=1000 ;;
 	*)
 		RAW_FILE=${SOC}-${TARGET_OS}-sd4g-$(date +%Y%m%d).img
