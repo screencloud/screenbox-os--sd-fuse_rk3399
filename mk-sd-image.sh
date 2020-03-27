@@ -70,7 +70,7 @@ if [ $# -eq 2 ]; then
     eflasher)
         RAW_SIZE_MB=7800 ;;
     buildroot)
-        RAW_SIZE_MB=1000 ;;
+        RAW_SIZE_MB=2000 ;;
     *)
         RAW_SIZE_MB=7800 ;;
     esac
@@ -96,7 +96,7 @@ else
 		RAW_SIZE_MB=7800 ;;
 	buildroot)
 	        RAW_FILE=${SOC}-sd-screenbox-os-$(date +%Y%m%d%H%m).img
-	        RAW_SIZE_MB=1000 ;;
+	        RAW_SIZE_MB=1200 ;;
 	*)
 		RAW_FILE=${SOC}-${TARGET_OS}-sd4g-$(date +%Y%m%d).img
 		RAW_SIZE_MB=7800 ;;

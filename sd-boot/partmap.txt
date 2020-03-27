@@ -7,6 +7,6 @@ flash=mmc,1:misc:raw:0x1000000,0x0400000;
 flash=mmc,1:resc:raw:0x1400000,0x0C00000:resource.img;
 flash=mmc,1:kern:raw:0x2000000,0x2000000:kernel.img;
 flash=mmc,1:boot:raw:0x4000000,0x2000000:boot.img;
-flash=mmc,1:rootfs:ext4:0x6000000,0x25C00000:rootfs.img;
-flash=mmc,1:userdata:ext4:0x2BC00000,0x0:userdata.img;
+flash=mmc,1:rootfs:ext4:0x6000000,0x30000000:rootfs.img;
+flash=mmc,1:userdata:ext4:0x36000000,0x0:userdata.img;
 
