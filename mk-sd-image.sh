@@ -30,8 +30,9 @@ fi
 # ----------------------------------------------------------
 # Get platform, target OS
 
-true ${SOC:=rk3399}
-true ${TARGET_OS:=${1,,}}
+SOC=$1
+TARGET_OS=$2
+
 
 case ${TARGET_OS} in
 debian* | buildroot* | friendlycore* | friendlydesktop* | lubuntu* | eflasher* | friendlywrt)
@@ -55,8 +56,8 @@ fi
 # Create zero file
 
 CODENAME=bionic
-if [ $# -eq 2 ]; then
-	RAW_FILE=$2
+if [ $# -eq 3 ]; then
+	RAW_FILE=$3
     case ${TARGET_OS} in
     friendlycore-arm64)
         RAW_SIZE_MB=7800 ;;
