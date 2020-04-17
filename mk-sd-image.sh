@@ -1,5 +1,6 @@
 #!/bin/bash
 set -eu
+set -x
 
 # Copyright (C) Guangzhou FriendlyARM Computer Tech. Co., Ltd.
 # (http://www.friendlyarm.com)
