@@ -19,6 +19,8 @@
 # ----------------------------------------------------------
 # Checking device for fusing
 
+set -x
+
 if [ $# -eq 0 ]; then
 	echo "Usage: $0 DEVICE <debian|buildroot|friendlycore-arm64|friendlydesktop-arm64|lubuntu|eflasher|friendlywrt>"
 	exit 0

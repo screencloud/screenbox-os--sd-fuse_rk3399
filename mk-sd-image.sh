@@ -142,7 +142,14 @@ LOOP_DEVICE=$(losetup -f)
 
 echo "Using device: ${LOOP_DEVICE}"
 
+function cleanup {
+   echo "************ CLEANUP ***************"
+    losetup -d ${LOOP_DEVICE}
+}
+
 if losetup ${LOOP_DEVICE} ${RAW_FILE}; then
+	trap cleanup EXIT
+
 	USE_KPARTX=1
 	PART_DEVICE=/dev/mapper/`basename ${LOOP_DEVICE}`
 	sleep 1
@@ -164,8 +171,8 @@ if [ "x${TARGET_OS}" = "xeflasher" ]; then
 	mkfs.exfat ${LOOP_DEVICE}p1 -n FriendlyARM
 fi
 
-# cleanup
-losetup -d ${LOOP_DEVICE}
+## cleanup
+##losetup -d ${LOOP_DEVICE}
 
 if [ ${RET} -ne 0 ]; then
 	echo "Error: ${RAW_FILE}: Fusing image failed, cleanup"
